@@ -1,7 +1,7 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <ProjectGuid>{12AEC00C-F17F-4375-93EF-3D488992007A}</ProjectGuid>
-        <MainSource>Tidy.Delphi.Yukon.Designtime.dpk</MainSource>
+        <MainSource>Tidy.Delphi.Athens.Designtime.dpk</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <TargetedPlatforms>1</TargetedPlatforms>
@@ -48,7 +48,7 @@
     <PropertyGroup Condition="'$(Base)'!=''">
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
-        <SanitizedProjectName>Tidy_Delphi_Yukon_Designtime</SanitizedProjectName>
+        <SanitizedProjectName>Tidy_Delphi_Athens_Designtime</SanitizedProjectName>
         <DesignOnlyPackage>true</DesignOnlyPackage>
         <VerInfo_Keys>CompanyName=;FileDescription=TTidy;FileVersion=1.0.0.0;InternalName=;LegalCopyright=Copyright © 2022 Lasse Markus Rautiainen. All rights reserved.;LegalTrademarks=;OriginalFilename=;ProductName=TTidy;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <GenPackage>true</GenPackage>
@@ -66,12 +66,12 @@
         <DCC_WIDECHAR_REDUCED>false</DCC_WIDECHAR_REDUCED>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <DCC_UsePackage>dbrtl;vcldb;Tidy.Delphi.Yukon.Runtime;rtl;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>dbrtl;vcldb;Tidy.Delphi.Athens.Runtime;rtl;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
-        <DCC_UsePackage>dbrtl;Tidy.Delphi.Yukon.Runtime;rtl;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>dbrtl;Tidy.Delphi.Athens.Runtime;rtl;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
@@ -101,7 +101,7 @@
         </DelphiCompile>
         <DCCReference Include="designide.dcp"/>
         <DCCReference Include="rtl.dcp"/>
-        <DCCReference Include="Tidy.Delphi.Yukon.Runtime.dcp"/>
+        <DCCReference Include="Tidy.Delphi.Athens.Runtime.dcp"/>
         <DCCReference Include="..\Source\Tidy.Register.pas"/>
         <RcItem Include="Images\TTidy.bmp">
             <ResourceType>BITMAP</ResourceType>
@@ -125,7 +125,7 @@
         <BorlandProject>
             <Delphi.Personality>
                 <Source>
-                    <Source Name="MainSource">Tidy.Delphi.Yukon.Designtime.dpk</Source>
+                    <Source Name="MainSource">Tidy.Delphi.Athens.Designtime.dpk</Source>
                 </Source>
                 <VersionInfo>
                     <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
@@ -183,10 +183,10 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="$(BDS)\Redist\osx64\libcgsqlite3.dylib" Class="DependencyModule"/>
-                <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\Tidy.Delphi.Yukon.Designtime.bpl" Configuration="Debug" Class="ProjectOutput"/>
-                <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\Tidy.Delphi.Yukon.Designtime.bpl" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\Tidy.Delphi.Athens.Designtime.bpl" Configuration="Debug" Class="ProjectOutput"/>
+                <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\22.0\Bpl\Tidy.Delphi.Athens.Designtime.bpl" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
-                        <RemoteName>Tidy_Delphi_Yukon_Designtime.bpl</RemoteName>
+                        <RemoteName>Tidy_Delphi_Athens_Designtime.bpl</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

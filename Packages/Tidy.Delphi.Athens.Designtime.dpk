@@ -1,6 +1,7 @@
-﻿package Tidy.Delphi.Yukon.Runtime;
+﻿package Tidy.Delphi.Athens.Designtime;
 
 {$R *.res}
+{$R *.dres}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
@@ -25,17 +26,16 @@
 {$IMAGEBASE $400000}
 {$DEFINE DEBUG}
 {$ENDIF IMPLICITBUILDING}
-{$DESCRIPTION 'TTidy control package - runtime'}
-{$RUNONLY}
+{$DESCRIPTION 'TTidy control package - designtime'}
+{$DESIGNONLY}
 {$IMPLICITBUILD ON}
 
 requires
-  vcl;
+  designide,
+  rtl,
+  Tidy.Delphi.Athens.Runtime;
 
 contains
-  Tidy in '..\Source\Tidy.pas',
-  Tidy.Consts in '..\Source\Tidy.Consts.pas',
-  Tidy.Types in '..\Source\Tidy.Types.pas',
-  Tidy.Classes in '..\Source\Tidy.Classes.pas';
+  Tidy.Register in '..\Source\Tidy.Register.pas';
 
 end.
