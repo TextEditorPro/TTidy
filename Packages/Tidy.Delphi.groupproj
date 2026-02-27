@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B6D1207F-2A62-482C-8145-18E7E6BF9C8C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Tidy.Delphi.Runtime.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Tidy.Delphi.Designtime.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Tidy_Delphi_Runtime">
+        <MSBuild Projects="Tidy.Delphi.Runtime.dproj"/>
+    </Target>
+    <Target Name="Tidy_Delphi_Runtime:Clean">
+        <MSBuild Projects="Tidy.Delphi.Runtime.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Tidy_Delphi_Runtime:Make">
+        <MSBuild Projects="Tidy.Delphi.Runtime.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Tidy_Delphi_Designtime">
+        <MSBuild Projects="Tidy.Delphi.Designtime.dproj"/>
+    </Target>
+    <Target Name="Tidy_Delphi_Designtime:Clean">
+        <MSBuild Projects="Tidy.Delphi.Designtime.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Tidy_Delphi_Designtime:Make">
+        <MSBuild Projects="Tidy.Delphi.Designtime.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Tidy_Delphi_Runtime;Tidy_Delphi_Designtime"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Tidy_Delphi_Runtime:Clean;Tidy_Delphi_Designtime:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Tidy_Delphi_Runtime:Make;Tidy_Delphi_Designtime:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

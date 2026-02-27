@@ -3,10 +3,10 @@
         <ProjectGuid>{4A8638E3-1A2C-4F19-94C7-408DBC8AA1D7}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="..\..\Packages\Tidy.Delphi.Yukon.Runtime.dproj">
+        <Projects Include="..\..\Packages\Tidy.Delphi.Runtime.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="..\..\Packages\Tidy.Delphi.Yukon.Designtime.dproj">
+        <Projects Include="..\..\Packages\Tidy.Delphi.Designtime.dproj">
             <Dependencies/>
         </Projects>
         <Projects Include="TidyDemo.dproj">
@@ -20,23 +20,23 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="Tidy_Delphi_Yukon_Runtime">
-        <MSBuild Projects="..\..\Packages\Tidy.Delphi.Yukon.Runtime.dproj"/>
+    <Target Name="Tidy_Delphi_Runtime">
+        <MSBuild Projects="..\..\Packages\Tidy.Delphi.Runtime.dproj"/>
     </Target>
-    <Target Name="Tidy_Delphi_Yukon_Runtime:Clean">
-        <MSBuild Projects="..\..\Packages\Tidy.Delphi.Yukon.Runtime.dproj" Targets="Clean"/>
+    <Target Name="Tidy_Delphi_Runtime:Clean">
+        <MSBuild Projects="..\..\Packages\Tidy.Delphi.Runtime.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="Tidy_Delphi_Yukon_Runtime:Make">
-        <MSBuild Projects="..\..\Packages\Tidy.Delphi.Yukon.Runtime.dproj" Targets="Make"/>
+    <Target Name="Tidy_Delphi_Runtime:Make">
+        <MSBuild Projects="..\..\Packages\Tidy.Delphi.Runtime.dproj" Targets="Make"/>
     </Target>
-    <Target Name="Tidy_Delphi_Yukon_Designtime">
-        <MSBuild Projects="..\..\Packages\Tidy.Delphi.Yukon.Designtime.dproj"/>
+    <Target Name="Tidy_Delphi_Designtime">
+        <MSBuild Projects="..\..\Packages\Tidy.Delphi.Designtime.dproj"/>
     </Target>
-    <Target Name="Tidy_Delphi_Yukon_Designtime:Clean">
-        <MSBuild Projects="..\..\Packages\Tidy.Delphi.Yukon.Designtime.dproj" Targets="Clean"/>
+    <Target Name="Tidy_Delphi_Designtime:Clean">
+        <MSBuild Projects="..\..\Packages\Tidy.Delphi.Designtime.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="Tidy_Delphi_Yukon_Designtime:Make">
-        <MSBuild Projects="..\..\Packages\Tidy.Delphi.Yukon.Designtime.dproj" Targets="Make"/>
+    <Target Name="Tidy_Delphi_Designtime:Make">
+        <MSBuild Projects="..\..\Packages\Tidy.Delphi.Designtime.dproj" Targets="Make"/>
     </Target>
     <Target Name="TidyDemo">
         <MSBuild Projects="TidyDemo.dproj"/>
@@ -48,13 +48,13 @@
         <MSBuild Projects="TidyDemo.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="Tidy_Delphi_Yukon_Runtime;Tidy_Delphi_Yukon_Designtime;TidyDemo"/>
+        <CallTarget Targets="Tidy_Delphi_Runtime;Tidy_Delphi_Designtime;TidyDemo"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Tidy_Delphi_Yukon_Runtime:Clean;Tidy_Delphi_Yukon_Designtime:Clean;TidyDemo:Clean"/>
+        <CallTarget Targets="Tidy_Delphi_Runtime:Clean;Tidy_Delphi_Designtime:Clean;TidyDemo:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Tidy_Delphi_Yukon_Runtime:Make;Tidy_Delphi_Yukon_Designtime:Make;TidyDemo:Make"/>
+        <CallTarget Targets="Tidy_Delphi_Runtime:Make;Tidy_Delphi_Designtime:Make;TidyDemo:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
