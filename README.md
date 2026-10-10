@@ -1,8 +1,6 @@
-# TTidy [![License](https://img.shields.io/badge/License-MIT-yellowgreen.svg)](https://opensource.org/licenses/MIT) 
+# TTidy 
 
 A HTML/XML tidy, clean, and repair wrapper for Delphi.
-
-Latest version for Delphi 13+ https://codeberg.org/TextEditorPro/TTidy
 
 https://www.html-tidy.org/
 
